@@ -1,16 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../style.css";
-export default function SingleButton({ buttonText }) {
-  return <button className="button">{buttonText}</button>;
+export default function SingleButton({ buttonText, routeLink }) {
+  return (
+    <NavLink className="button" to={`/${routeLink}`}>
+      {buttonText}
+    </NavLink>
+  );
 }
-
-// const props = { buttonText: "jack", age: 12 };
-// const {
-//   buttonText,
-//   age: { jackAge = 12 },
-// } = props;
-// console.log(jackAge);
-
-// const arr = ["jack", "dennis", "rose"];
-// const [jackName, dennisName] = arr;
-// console.log(dennisName);

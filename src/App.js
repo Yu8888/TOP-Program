@@ -1,11 +1,26 @@
 import React from "react";
-import HomePage from "./pages/HomePage";
 
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import ScheduleForm from "./pages/ScheduleFormPage";
+import HomePage from "./pages/HomePage";
+import OnBorderFormPage from "./pages/OnBorderFormPage";
+import OrganizationFormPage from "./pages/OrganizationFormPage";
 function App() {
   return (
-    <div>
-      <HomePage />
-    </div>
+    <Router>
+      <Route exact path="/">
+        <HomePage />
+      </Route>
+      <Route path="/scheduleform">
+        <ScheduleForm />
+      </Route>
+      <Route path="/onborderform">
+        <OnBorderFormPage />
+      </Route>
+      <Route path="/organizationform">
+        <OrganizationFormPage />
+      </Route>
+    </Router>
   );
 }
 
