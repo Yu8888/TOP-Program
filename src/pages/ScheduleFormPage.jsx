@@ -4,27 +4,27 @@ export default function ScheduleFormPage() {
   const [goalsList, setGoalsList] = useState([]);
 
   const [singleGoal, setSingleGoal] = useState({
-    goalName: "Understand the norms",
+    goalName: "Understanding team norms",
     taskName: "Peer Support",
     activity: "Training",
   });
   const [secondGoal, setsecondGoal] = useState({
-    goalName: "Knowing git",
+    goalName: "Understanding company culture",
     taskName1: "Induction",
     activity1: "Pair Programming",
   });
   const [thirdGoal, setthirdGoal] = useState({
-    goalName: "Knowing React",
+    goalName: "Understand what work to do and when",
     taskName2: "Team Leader Assistance",
     activity2: "Mentoring",
   });
   const [forthGoal, setforthGoal] = useState({
-    goalName: "Knowing Jest",
+    goalName: "Understand the project structure and aims and the implications",
     taskName3: "Team Leader Assistance",
     activity3: "Mentoring",
   });
   const [fifthGoal, setfifthGoal] = useState({
-    goalName: "Knowing Java",
+    goalName: "Understand the project domain knowledge and terminology",
     taskName4: "Team Leader Assistance",
     activity4: "Mentoring",
   });
