@@ -4,17 +4,17 @@ export default function SingleGoal({ singleGoal, handleGoal, handleTask }) {
   return (
     <li className="table-row">
       <div className="col col-1">{singleGoal.goalName}</div>
-      <div className="col col-2">
+      <div className="col col-2" data-label="Amount">
         <input
           type="text"
-          name="taskName"
+          name="activity"
           id=""
-          placeholder="Asking questions"
-          value={singleGoal.taskName}
+          value={singleGoal.activity}
+          placeholder="Mentoring"
           onChange={handleTask}
         />
       </div>
-      <div className="col col-3" data-label="Amount">
+      <div className="col col-3" data-label="Activity">
         <input
           type="text"
           name="activity"

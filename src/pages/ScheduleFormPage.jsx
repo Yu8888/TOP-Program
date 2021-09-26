@@ -10,10 +10,12 @@ export default function ScheduleFormPage() {
   function handleGoal(rowGoal) {
     console.log(rowGoal);
     const newSingleGoal = {
-      ...singleGoal,
+      ...rowGoal,
       id: new Date().getTime().toString(),
     };
-    setGoalsList([...goalsList, newSingleGoal]);
+    setGoalsList((prev) => {
+      return [...prev, newSingleGoal];
+    });
     console.log(goalsList);
   }
 
