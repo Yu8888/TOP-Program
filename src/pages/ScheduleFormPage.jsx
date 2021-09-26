@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SingleGoal from "../components/SingleGoal";
 export default function ScheduleFormPage() {
   const [goalsList, setGoalsList] = useState([]);
+
   const [singleGoal, setSingleGoal] = useState({
     goalName: "Understand the norms",
     taskName: "Peer Support",
@@ -9,29 +10,26 @@ export default function ScheduleFormPage() {
   });
   const [secondGoal, setsecondGoal] = useState({
     goalName: "Knowing git",
-    taskName1: "",
-    activity1: "",
+    taskName1: "Induction",
+    activity1: "Pair Programming",
   });
   const [thirdGoal, setthirdGoal] = useState({
     goalName: "Knowing React",
-    taskName2: "",
-    activity2: "",
+    taskName2: "Team Leader Assistance",
+    activity2: "Mentoring",
   });
   const [forthGoal, setforthGoal] = useState({
     goalName: "Knowing Jest",
-    taskName3: "",
-    activity3: "",
+    taskName3: "Team Leader Assistance",
+    activity3: "Mentoring",
   });
   const [fifthGoal, setfifthGoal] = useState({
     goalName: "Knowing Java",
-    taskName4: "",
-    activity4: "",
+    taskName4: "Team Leader Assistance",
+    activity4: "Mentoring",
   });
   function handleGoal(rowGoal) {
     console.log(rowGoal);
-    const newSingleGoal = {
-      ...rowGoal,
-    };
     setGoalsList((prev) => {
       console.log([...prev, rowGoal]);
       return [...prev, rowGoal];
@@ -53,6 +51,32 @@ export default function ScheduleFormPage() {
       setforthGoal({ ...forthGoal, [name]: value });
     } else if (name === "taskName4" || name === "activity4") {
       setfifthGoal({ ...fifthGoal, [name]: value });
+    }
+  }
+  function showTasksList(goal) {
+    if (goal.taskName) {
+      return singleGoal.taskName;
+    } else if (goal.taskName1) {
+      return secondGoal.taskName1;
+    } else if (goal.taskName2) {
+      return thirdGoal.taskName2;
+    } else if (goal.taskName3) {
+      return forthGoal.taskName3;
+    } else if (goal.taskName4) {
+      return fifthGoal.taskName4;
+    }
+  }
+  function showActivitysList(goal) {
+    if (goal.activity) {
+      return singleGoal.activity;
+    } else if (goal.activity1) {
+      return secondGoal.activity1;
+    } else if (goal.activity2) {
+      return thirdGoal.activity2;
+    } else if (goal.activity3) {
+      return forthGoal.activity3;
+    } else if (goal.activity4) {
+      return fifthGoal.activity4;
     }
   }
   return (
@@ -125,20 +149,8 @@ export default function ScheduleFormPage() {
             return (
               <li className="table-row" key={index}>
                 <div className="col col-1">{goal.goalName}</div>
-                <div className="col col-2">
-                  {singleGoal.taskName ||
-                    goal.taskName1 ||
-                    goal.taskName2 ||
-                    goal.taskName3 ||
-                    goal.taskName4}
-                </div>
-                <div className="col col-3">
-                  {goal.activity ||
-                    goal.activity1 ||
-                    goal.activity2 ||
-                    goal.activity3 ||
-                    goal.activity4}
-                </div>
+                <div className="col col-2">{showTasksList(goal)}</div>
+                <div className="col col-3">{showActivitysList(goal)}</div>
               </li>
             );
           })}
