@@ -4,7 +4,7 @@ export default function ScheduleFormPage() {
   const [goalsList, setGoalsList] = useState([]);
   const [singleGoal, setSingleGoal] = useState({
     goalName: "Understand the norms",
-    taskname: "",
+    taskName: "",
     activity: "",
   });
   function handleGoal(rowGoal) {
@@ -56,8 +56,8 @@ export default function ScheduleFormPage() {
           {goalsList.map((goal) => {
             return (
               <li className="table-row" key={new Date().getTime().toString()}>
-                <div className="col col-1">{goal.goalname}</div>
-                <div className="col col-2">{goal.taskname}</div>
+                <div className="col col-1">{goal.goalName}</div>
+                <div className="col col-2">{goal.taskName}</div>
                 <div className="col col-3">{goal.activity}</div>
               </li>
             );
