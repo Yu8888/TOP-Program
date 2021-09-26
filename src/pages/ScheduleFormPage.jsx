@@ -53,9 +53,9 @@ export default function ScheduleFormPage() {
             <div className="col col-2">Tasks</div>
             <div className="col col-3">Activity</div>
           </li>
-          {goalsList.map((goal) => {
+          {goalsList.map((goal, index) => {
             return (
-              <li className="table-row" key={new Date().getTime().toString()}>
+              <li className="table-row" key={index}>
                 <div className="col col-1">{goal.goalName}</div>
                 <div className="col col-2">{goal.taskName}</div>
                 <div className="col col-3">{goal.activity}</div>
