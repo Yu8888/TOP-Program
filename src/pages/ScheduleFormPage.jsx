@@ -41,8 +41,6 @@ export default function ScheduleFormPage() {
             handleGoal={handleGoal}
             handleTask={handleChange}
           />
-          {/* <SingleGoal goal="Understand the norms" handleGoal={handleGoal} />
-          <SingleGoal goal="Understand the norms" handleGoal={handleGoal} /> */}
         </ul>
       </div>
       <div className="container show-container">
