@@ -60,7 +60,7 @@ export default function OnBorderPage() {
           <label for="Expert">Expert</label>
         </div>
         <div className="btn">
-          <button type="submit" className="button">
+          <button className="button" disabled>
             Submit
           </button>
         </div>
