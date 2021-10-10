@@ -32,6 +32,6 @@ connection.once("open", () => {
 
 app.use(express.json());
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`welcome ur listening at port ${port}`);
+app.listen(PORT, () => {
+  console.log(`welcome ur listening at port ${PORT}`);
 });
