@@ -13,7 +13,8 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
-const port = 5000;
+const dotenv = require("dotenv");
+const PORT = process.env.PORT || 5000;
 const app = express();
 // const uri = process.env.MONGODB_URI;
 
@@ -31,6 +32,6 @@ connection.once("open", () => {
 
 app.use(express.json());
 
-app.listen(port, "0.0.0.0", () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`welcome ur listening at port ${port}`);
 });
