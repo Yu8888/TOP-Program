@@ -1,4 +1,16 @@
 /* globle style */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
 body {
   margin: 0;
   padding: 0;
@@ -40,82 +52,75 @@ body {
 /* button component style */
 
 /* Schudeal Table style*/
-
-.container {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.show-container {
-  margin-top: 100px;
-}
-h2 {
-  font-size: 26px;
-  margin: 20px 0;
+.scheduleform-title {
+  font-size: 2rem;
+  margin: 10px 0 20px 0;
   text-align: center;
 }
-h2 small {
-  font-size: 0.5em;
+
+li {
+  list-style-type: none;
+  margin-bottom: 40px;
 }
-.scheduleform-choose-button {
-  border-radius: 4px;
+
+label {
+  margin-right: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container {
   background-color: #fff;
-  border: 2px solid gray;
 }
-.scheduleform-choose-button:hover {
+.goal-container {
+  position: relative;
+  margin: 0 300px;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+
+.activity-btn {
+  position: absolute;
+  right: 20px;
+  margin: 0 10px;
+  padding: 5px;
+}
+.activity-btn:hover {
   background-color: lightgray;
 }
-.responsive-table li {
-  border-radius: 3px;
-  padding: 25px 30px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
+.activity-btn-add {
+  position: absolute;
+  right: 20px;
+  margin: 0 10px 5px 0;
+  width: 65px;
+  height: 38px;
+  bottom: 75px;
 }
-.responsive-table .table-header {
-  background-color: #95a5a6;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+.activity-btn-add:hover {
+  background-color: lightgray;
 }
-.responsive-table .table-row {
-  background-color: #ffffff;
-  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+.iteration-all {
+  margin-top: 40px;
 }
-.responsive-table .col-1 {
-  flex-basis: 15%;
-}
-.responsive-table .col-2 {
-  flex-basis: 40%;
-}
-.responsive-table .col-3 {
-  flex-basis: 25%;
-}
-.responsive-table .col-4 {
-  flex-basis: 25%;
-}
-@media all and (max-width: 767px) {
-  .responsive-table .table-header {
-    display: none;
-  }
-  .responsive-table li {
-    display: block;
-  }
-  .responsive-table .col {
-    flex-basis: 100%;
-  }
-  .responsive-table .col {
-    display: flex;
-    padding: 10px 0;
-  }
-  .responsive-table .col:before {
-    color: #6c7a89;
-    padding-right: 10px;
-    content: attr(data-label);
-    flex-basis: 50%;
-    text-align: right;
-  }
+.iteration-all h3 {
+  font-weight: bolder;
+  margin-left: 20px;
 }
 /* Schudeal Table style*/
+
+/* Utilities */
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.7fr;
+}
+.card {
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.3);
+}
