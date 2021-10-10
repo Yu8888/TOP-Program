@@ -496,30 +496,7 @@ export default function ScheduleFormPage() {
       </div>
 
       <div className="iteration-all grid">
-        <h3>Iteration1</h3>
-        <h3>Iteration2</h3>
-        <h3>Iteration3</h3>
-        {/* <div className="iteration-1 card">
-          {handleShowingGoalNameIteration(
-            checked,
-            checkedIteration1,
-            singleGoal
-          )}
-        </div>
-        <div className="iteration-2 card">
-          {handleShowingGoalNameIteration(
-            checked,
-            checkedIteration2,
-            singleGoal
-          )}
-        </div>
-        <div className="iteration-3 card">
-          {handleShowingGoalNameIteration(
-            checked,
-            checkedIteration3,
-            singleGoal
-          )}
-        </div> */}
+        <button className="button">Submit</button>
       </div>
     </div>
   );
