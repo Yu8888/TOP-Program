@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SingleGoal from "../components/SingleGoal";
 import goalList from "../data/goals";
+import axios from "axios";
 export default function ScheduleFormPage() {
   const [statesChecked, setStatesChecked] = React.useState(
     new Array(goalList.length).fill(false)
@@ -445,13 +446,32 @@ export default function ScheduleFormPage() {
 
     setIterations(newArray);
   };
-
+  async function handleSubmit() {
+    const res = await axios.post("/scheduleform/form", {
+      firstGoal: firstGoal,
+      secondGoal: secondGoal,
+      thirdGoal: thirdGoal,
+      forthGoal: forthGoal,
+      fifthGoal: fifthGoal,
+      sixthGoal: sixthGoal,
+      seventhGoal: seventhGoal,
+      eighthGoal: eighthGoal,
+      ninethGoal: ninethGoal,
+      tenthGoal: tenthGoal,
+      eleventhGoal: eleventhGoal,
+    });
+    if (res.status === 200) {
+      alert("Data has been saved!!");
+    } else {
+      alert("Plz try again");
+    }
+  }
   return (
     <div>
       <h2 className="scheduleform-title">ScheduleForm</h2>
 
       <div className="scheduleform_body">
-        <div className="container flex">
+        <div className="grid">
           <div>
             <ul>
               <li>
@@ -495,8 +515,10 @@ export default function ScheduleFormPage() {
         })}
       </div>
 
-      <div className="iteration-all grid">
-        <button className="button">Submit</button>
+      <div className="btn">
+        <button className="button" onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
     </div>
   );

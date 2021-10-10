@@ -5,7 +5,7 @@ import ScheduleForm from "./pages/ScheduleFormPage";
 
 import HomePage from "./pages/HomePage";
 import OnBorderFormPage from "./pages/OnBorderFormPage";
-import OrganizationFormPage from "./pages/OrganizationFormPage";
+
 function App() {
   return (
     <Router>
@@ -17,9 +17,6 @@ function App() {
       </Route>
       <Route path="/onborderform">
         <OnBorderFormPage />
-      </Route>
-      <Route path="/organizationform">
-        <OrganizationFormPage />
       </Route>
     </Router>
   );

@@ -59,6 +59,11 @@ export default function OnBorderPage() {
           <input type="radio" name="db" id="Expert" classname="input" />
           <label for="Expert">Expert</label>
         </div>
+        <div className="btn">
+          <button type="submit" className="button">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
