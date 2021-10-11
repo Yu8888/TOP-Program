@@ -7,7 +7,7 @@ export default function SingleActivity({
   removeActivity,
 }) {
   return (
-    <li>
+    <li data-testid="activity-1">
       {activityName}
       <button
         type="button"
